@@ -3,14 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>WEBSTUDIO</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,287 +11,385 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="./css/portfolio.css" />
   </head>
-  <body class="page-dim">
-    <!-- Headers Section -->
-    <header class="top-head">
+
+  <body>
+    <!-- Header Section -->
+
+    <header class="header portfolio--header">
+      <!-- LOGO -->
       <div class="topdiv container">
         <nav class="navig">
-          <!-- Logo -->
-          <a class="logo" href="./index.html"
-            >Web<span class="logo-studio-dark">Studio</span>
+          <a class="logo link first-logo" href="./index.html">
+            Web<span class="logo-studio-dark">Studio</span>
           </a>
-          <ul class="top-line-one list">
+
+          <ul class="list top-line">
             <li>
-              <a class="index cls-link" href="./index.html">Studio</a>
+              <a class="index link top cls-link" href="./index.html">Studio</a>
             </li>
             <li>
-              <a class="index cls-link abs-link" href="./portfolio.html"
+              <a
+                class="index link top abs-link second-link"
+                href="./portfolio.html"
                 >Portfolio</a
               >
             </li>
-            <li><a class="index cls-link" href="">Contacts</a></li>
+            <li><a class="index link top cls-link" href="">Contacts</a></li>
           </ul>
         </nav>
-        <!-- Contact section -->
-        <address>
-          <ul class="top-line-two list">
+        <address class="add">
+          <ul class="list top-line">
             <li>
-              <a class="contact cls-link" href="mailto:info@devstudio.com"
+              <a
+                class="contact link top cls-link"
+                href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
             <li>
-              <a class="contact cls-link" href="tel:+110001111111"
+              <a class="contact link top cls-link" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
             </li>
           </ul>
         </address>
+
+        <button
+          class="btn-mobile-nav js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        </button>
+      </div>
+
+      <div class="navigation js-menu-container" id="mobile-menu">
+        <button class="close-btn js-close-menu">
+          <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+        </button>
+        <nav class="main-nav">
+          <ul class="nav-list list">
+            <li>
+              <a class="studio-link link" href="./index.html" title=""
+                >Studio</a
+              >
+            </li>
+            <li>
+              <a class="nav--link link" href="./portfolio.html" title=""
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a class="nav--link link" href="#" title="">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="address-container">
+          <address class="mobile-menu-address">
+            <ul class="address-list list">
+              <li>
+                <a class="number" href="tel:+110001111111" title=""
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li>
+                <a class="e-mail" href="mailto:info@devstudio.com" title=""
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+
+          <ul class="social-list list">
+            <li class="insta">
+              <a href="" class="instagr">
+                <svg width="16" height="16" class="firstred">
+                  <use href="./images/icons.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="insta">
+              <a href="" class="instagr">
+                <svg width="16" height="16" class="firstred">
+                  <use href="./images/icons.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="insta">
+              <a href="" class="instagr">
+                <svg width="16" height="16" class="firstred">
+                  <use href="./images/icons.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="insta">
+              <a href="" class="instagr">
+                <svg width="16" height="16" class="firstred">
+                  <use href="./images/icons.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
-    <!-- Filter Buttons section-->
+    <!-- First Section Buttons -->
     <main>
-      <section class="section-portfolio">
-        <div class="container column-alin">
-          <h1 class="visually-hidden">Portfolio</h1>
-          <ul class="button-portfolio">
-            <li>
-              <button class="first-one-button" type="button">All</button>
+      <section class="section portf-section">
+        <div class="container">
+          <h1 class="visually-hidden">EXPLORE US</h1>
+          <ul class="list main-list mobile--list">
+            <li class="main-elements">
+              <button
+                id="myBtn"
+                class="firstbtn main-btn btn-all btn-menu main--first--btn"
+                type="button"
+              >
+                All
+              </button>
             </li>
-            <li>
-              <button class="first-one-button" type="button">Web Site</button>
+            <li class="main-elements">
+              <button class="firstbtn main-btn btn-all btn-menu" type="button">
+                Web Site
+              </button>
             </li>
-            <li>
-              <button class="first-one-button" type="button">App</button>
+            <li class="main-elements">
+              <button class="firstbtn main-btn btn-all btn-menu" type="button">
+                App
+              </button>
             </li>
-            <li>
-              <button class="first-one-button" type="button">Design</button>
+            <li class="main-elements">
+              <button class="firstbtn main-btn btn-all btn-menu" type="button">
+                Design
+              </button>
             </li>
-            <li>
-              <button class="first-one-button" type="button">Marketing</button>
+            <li class="main-elements">
+              <button class="firstbtn main-btn btn-all btn-menu" type="button">
+                Marketing
+              </button>
             </li>
           </ul>
 
-          <!-- Project card  -->
+          <!-- Second Section - Card -->
 
-          <ul class="feature-portfolio">
-            <!-- First card -->
-            <li class="feature-image-portfolio">
-              <a href="" class="feature-link">
-                <div class="card-images">
+          <ul class="list card-list row--list cards--list">
+            <!-- ROW1 -->
+
+            <li class="card-element row--element portfolio--element">
+              <a href="" class="link portf-link">
+                <div class="card-container">
                   <img
-                    class="images"
-                    src="./images/banking-app1-portfolio.jpg"
+                    src="./images/img4.jpg"
+                    alt="Banking Interface"
                     width="360"
-                    height="300"
-                    alt="bankingapp"
                   />
-                  <p class="card-paragraph">
+                  <p class="app-storage">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
                     App · Cloud Storage App
                   </p>
                 </div>
-                <div class="div-images-portfolio">
-                  <h2 class="titlefour title-first-element">
+                <div class="app">
+                  <h2
+                    class="titlefour card-title interface--concept second-title-card"
+                  >
                     Banking App Interface Concept
                   </h2>
-                  <p class="firsttitle">App</p>
+                  <p class="firsttitle small--title">App</p>
+                </div>
+              </a>
+            </li>
+            <li class="card-element row--element portfolio--element">
+              <a href="" class="link portf-link">
+                <div class="card-container">
+                  <img src="./images/img5.jpg" alt="Payment" width="360" />
+                  <p class="app-storage">
+                    14 Stylish and User-Friendly App Design Concepts · Task
+                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                    App · Cloud Storage App
+                  </p>
+                </div>
+                <div class="app">
+                  <h2
+                    class="titlefour card-title interface--concept second-title-card"
+                  >
+                    Cashless Payment
+                  </h2>
+                  <p class="firsttitle small-title">Marketing</p>
+                </div>
+              </a>
+            </li>
+            <li class="card-element row--element portfolio--element">
+              <a href="" class="link portf-link">
+                <div class="card-container">
+                  <img src="./images/img6.jpg" alt="App" width="360" />
+                  <p class="app-storage">
+                    14 Stylish and User-Friendly App Design Concepts · Task
+                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                    App · Cloud Storage App
+                  </p>
+                </div>
+                <div class="app">
+                  <h2
+                    class="titlefour card-title interface--concept second-title-card"
+                  >
+                    Meditation App
+                  </h2>
+                  <p class="firsttitle small-title">App</p>
                 </div>
               </a>
             </li>
 
-            <!-- Second card -->
-            <li class="feature-image-portfolio">
-              <a href="" class="feature-link">
-                <div class="card-images">
-                  <img
-                    class="images"
-                    src="./images/cashless2-portfolio.jpg"
-                    width="360"
-                    height="300"
-                    alt="cashlesspayment"
-                  />
-                  <p class="card-paragraph">
+            <!-- ROW2 -->
+
+            <li class="card-element row--element portfolio--element">
+              <a href="" class="link portf-link">
+                <div class="card-container">
+                  <img src="./images/img7.jpg" alt="Taxi" width="360" />
+                  <p class="app-storage">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
                     App · Cloud Storage App
                   </p>
                 </div>
-                <div class="div-images-portfolio">
-                  <h2 class="titlefour title-first-element">
-                    Cashless Payment
+                <div class="app">
+                  <h2
+                    class="titlefour card-title interface--concept second-title-card"
+                  >
+                    Taxi Service
                   </h2>
-                  <p class="firsttitle">Marketing</p>
+                  <p class="firsttitle small-title">Marketing</p>
                 </div>
               </a>
             </li>
-            <!-- Third card -->
-            <li class="feature-image-portfolio">
-              <a href="" class="feature-link">
-                <div class="card-images">
-                  <img
-                    class="images"
-                    src="./images/meditation-app3-portfolio.jpg"
-                    width="360"
-                    height="300"
-                    alt="maditationapp"
-                  />
-                  <p class="card-paragraph">
+            <li class="card-element row--element portfolio--element">
+              <a href="" class="link portf-link">
+                <div class="card-container">
+                  <img src="./images/img9.jpg" alt="Phone Screen" width="360" />
+                  <p class="app-storage">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
                     App · Cloud Storage App
                   </p>
                 </div>
-                <div class="div-images-portfolio">
-                  <h2 class="titlefour title-first-element">Meditation App</h2>
-                  <p class="firsttitle">App</p>
-                </div>
-              </a>
-            </li>
-            <!-- Fourth card -->
-            <li class="feature-image-portfolio">
-              <a href="" class="feature-link">
-                <div class="card-images">
-                  <img
-                    class="images"
-                    src="./images/taxi-service4-portfolio.jpg"
-                    width="360"
-                    height="300"
-                    alt="taxiservice"
-                  />
-                  <p class="card-paragraph">
-                    14 Stylish and User-Friendly App Design Concepts · Task
-                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
-                    App · Cloud Storage App
-                  </p>
-                </div>
-                <div class="div-images-portfolio">
-                  <h2 class="titlefour title-first-element">Taxi Service</h2>
-                  <p class="firsttitle">Marketing</p>
-                </div>
-              </a>
-            </li>
-            <!-- Fifth card -->
-            <li class="feature-image-portfolio">
-              <a href="" class="feature-link">
-                <div class="card-images">
-                  <img
-                    class="images"
-                    src="./images/screen5-portfolio.jpg"
-                    width="360"
-                    height="300"
-                    alt="screenillustration"
-                  />
-                  <p class="card-paragraph">
-                    14 Stylish and User-Friendly App Design Concepts · Task
-                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
-                    App · Cloud Storage App
-                  </p>
-                </div>
-                <div class="div-images-portfolio">
-                  <h2 class="titlefour title-first-element">
+                <div class="app">
+                  <h2
+                    class="titlefour card-title interface--concept second-title-card"
+                  >
                     Screen Illustrations
                   </h2>
-                  <p class="firsttitle">Design</p>
+                  <p class="firsttitle small-title">Design</p>
                 </div>
               </a>
             </li>
-            <!-- Sixth card -->
-            <li class="feature-image-portfolio">
-              <a href="" class="feature-link">
-                <div class="card-images">
+            <li class="card-element row--element portfolio--element">
+              <a href="" class="link portf-link">
+                <div class="card-container">
                   <img
-                    class="images"
-                    src="./images/online6-portfolio.jpg"
+                    src="./images/img10.jpg"
+                    alt="Online Courses"
                     width="360"
-                    height="300"
-                    alt="onlinecourses"
                   />
-                  <p class="card-paragraph">
+                  <p class="app-storage">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
                     App · Cloud Storage App
                   </p>
                 </div>
-                <div class="div-images-portfolio">
-                  <h2 class="titlefour title-first-element">Online Courses</h2>
-                  <p class="firsttitle">Marketing</p>
+
+                <div class="app">
+                  <h2
+                    class="titlefour card-title interface--concept second-title-card"
+                  >
+                    Online Courses
+                  </h2>
+                  <p class="firsttitle small-title">Marketing</p>
                 </div>
               </a>
             </li>
-            <!-- Seventh cards -->
-            <li class="feature-image-portfolio">
-              <a href="" class="feature-link">
-                <div class="card-images">
+
+            <!-- ROW3 -->
+
+            <li class="card-element row--element portfolio--element">
+              <a href="" class="link portf-link">
+                <div class="card-container">
                   <img
-                    class="images"
-                    src="./images/instagram7-portfolio.jpg"
+                    src="./images/img14.jpg"
+                    alt="Instagram Stories"
                     width="360"
-                    height="300"
-                    alt="instagramstories"
                   />
-                  <p class="card-paragraph">
+                  <p class="app-storage">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
                     App · Cloud Storage App
                   </p>
                 </div>
-                <div class="div-images-portfolio">
-                  <h2 class="titlefour title-first-element">
+                <div class="app">
+                  <h2
+                    class="titlefour card-title interface--concept second-title-card"
+                  >
                     Instagram Stories Concept
                   </h2>
-                  <p class="firsttitle">Design</p>
+                  <p class="firsttitle small-title">Design</p>
                 </div>
               </a>
             </li>
-            <!-- Eight card -->
-            <li class="feature-image-portfolio">
-              <a href="" class="feature-link">
-                <div class="card-images">
+            <li class="card-element row--element portfolio--element">
+              <a href="" class="link portf-link">
+                <div class="card-container">
                   <img
-                    class="images"
-                    src="./images/organic8-portfolio.jpg"
+                    src="./images/img12.jpg"
+                    alt="Organic Food"
                     width="360"
-                    height="300"
-                    alt="organicfood"
                   />
-                  <p class="card-paragraph">
+                  <p class="app-storage">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
                     App · Cloud Storage App
                   </p>
                 </div>
-                <div class="div-images-portfolio">
-                  <h2 class="titlefour title-first-element">Organic Food</h2>
-                  <p class="firsttitle">Web Site</p>
+                <div class="app">
+                  <h2
+                    class="titlefour card-title interface--concept second-title-card"
+                  >
+                    Organic Food
+                  </h2>
+                  <p class="firsttitle small-title">Web Site</p>
                 </div>
               </a>
             </li>
-            <!-- Ninth card -->
-            <li class="feature-image-portfolio">
-              <a href="" class="feature-link">
-                <div class="card-images">
-                  <img
-                    class="images"
-                    src="./images/fresh-cofee9-portfolio.jpg"
-                    width="360"
-                    height="300"
-                    alt="freshcoffee"
-                  />
-                  <p class="card-paragraph">
+            <li class="card-element row--element portfolio--element">
+              <a href="" class="link portf-link">
+                <div class="card-container">
+                  <img src="./images/img13.jpg" alt="Coffee" width="360" />
+                  <p class="app-storage">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
                     App · Cloud Storage App
                   </p>
                 </div>
-                <div class="div-images-portfolio">
-                  <h2 class="titlefour title-first-element">Fresh Coffee</h2>
-                  <p class="firsttitle">Web Site</p>
+                <div class="app">
+                  <h2
+                    class="titlefour card-title interface--concept second-title-card"
+                  >
+                    Fresh Coffee
+                  </h2>
+                  <p class="firsttitle small-title">Web Site</p>
                 </div>
               </a>
             </li>
@@ -307,66 +398,71 @@
       </section>
     </main>
 
-    <!-- Footer section -->
+    <!-- Footer Section -->
 
     <footer class="lastpart">
-      <div class="container foot-div">
-        <div class="footer-div-logo">
-          <a class="logo logo-st link" href="./index.html"
-            >Web<span class="logoc">Studio</span>
+      <div class="foot-div container">
+        <div class="footer-div-logo" id="myLogoDiv">
+          <a class="logo link logo-st" href="./index.html">
+            Web<span class="logoc">Studio</span>
           </a>
-          <p class="description last-description">
+          <p class="description last-description" id="footerdescription">
             Increase the flow of customers and sales for your business with
             digital marketing & growth solutions.
           </p>
         </div>
-        <div>
+
+        <div class="soc-media-div">
           <p class="scp">Social media</p>
           <ul class="ul-div-class">
-            <li class="instagram">
-              <a class="instagram-link-two" href="">
-                <svg class="firstredsocial" width="24" height="24">
+            <li class="last-element-div">
+              <a href="" class="last-link">
+                <svg width="24" height="24" class="firstredsocial">
                   <use href="./images/icons.svg#instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="instagram">
-              <a class="instagram-link-two" href="">
-                <svg class="firstredsocial" width="24" height="24">
+
+            <li class="last-element-div">
+              <a href="" class="last-link">
+                <svg width="24" height="24" class="firstredsocial">
                   <use href="./images/icons.svg#twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="instagram">
-              <a class="instagram-link-two" href="">
-                <svg class="firstredsocial" width="24" height="24">
+
+            <li class="last-element-div">
+              <a href="" class="last-link">
+                <svg width="24" height="24" class="firstredsocial">
                   <use href="./images/icons.svg#facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="instagram">
-              <a class="instagram-link-two" href="">
-                <svg class="firstredsocial" width="24" height="24">
+
+            <li class="last-element-div">
+              <a href="" class="last-link">
+                <svg width="24" height="24" class="firstredsocial">
                   <use href="./images/icons.svg#linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-        <div class="form-div">
-          <p class="sbsc">Subscribe</p>
+        <div class="form-div subscribe-section" id="mysubscribe">
+          <p class="sbsc subscribe-text tablet--size">Subscribe</p>
           <form
             class="subs-class"
             name="signup_form"
             autocomplete="on"
             novalidate
           >
-            <label class="lbl">
+            <label class="lbl lbl-class">
               <input
                 type="email"
                 name="email"
-                class="placeh"
+                class="placeh input--class"
                 placeholder="E-mail"
+                id="myPH"
               />
             </label>
             <button type="submit" class="btn-subscribe">
@@ -379,5 +475,12 @@
         </div>
       </div>
     </footer>
+    <script defer src="./mobile.js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
