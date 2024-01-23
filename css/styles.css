@@ -28,6 +28,10 @@ ul {
   margin: 0;
 }
 
+.page-dim {
+  max-width: 1440px;
+}
+
 .navig {
   display: flex;
   margin: 0px;
